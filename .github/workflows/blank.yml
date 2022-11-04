@@ -27,6 +27,13 @@ jobs:
         with:
           terraform_version: 1.0.0
 
+      - name: Create New Relic deployment via secrets
+        uses: newrelic/deployment-marker-action@v1
+        with:
+          api_key: ${{ secrets.NEW_RELIC_API_KEY }}
+          account_id: ${{ secrets.NEW_RELIC_ACCOUNT_ID }}
+          
+
       - name: Terraform Init
         id  : init
         run : terraform init
