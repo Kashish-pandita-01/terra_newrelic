@@ -34,9 +34,12 @@ jobs:
       #     accountId: ${{ secrets.NEW_RELIC_ACCOUNT_ID }}
           
 
-      # - name: Terraform Init
-      #   id  : init
-      #   run : terraform init
+      - name: Terraform Init
+        id  : init
+        run : terraform init
+
+      - name: Terraform refresh
+        run : terraform refresh
 
       # - name: Terraform Plan
       #   id  : plan
