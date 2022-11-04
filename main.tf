@@ -21,7 +21,7 @@ resource "newrelic_infra_alert_condition" "high_disk_usage" {
   }
 
   warning {
-    duration      = 10
+    duration      = 20
     value         = 80
     time_function = "all"
   }
