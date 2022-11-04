@@ -27,9 +27,6 @@ jobs:
         with:
           terraform_version: 1.0.0
 
-      - name: Set Release Version from Tag
-        run: echo "RELEASE_VERSION=${{ GITHUB_REF:10 }}" >> $GITHUB_ENV
-
       - name: Create New Relic deployment marker
         uses: newrelic/deployment-marker-action@v1
         with:
